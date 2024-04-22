@@ -8,7 +8,12 @@ require (
 	k8s.io/api v0.29.3
 	k8s.io/apimachinery v0.29.3
 	k8s.io/client-go v0.29.3
-	tailscale.com v1.62.0
+	tailscale.com v1.64.2
+)
+
+require (
+	github.com/bits-and-blooms/bitset v1.13.0 // indirect
+	github.com/gaissmai/bart v0.4.1 // indirect
 )
 
 require (
@@ -111,7 +116,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	// gvisor.dev/gvisor v0.0.0-20240228042926-ccc3c2cbd26d // indirect
 	gvisor.dev/gvisor v0.0.0-20240306221502-ee1e1f6070e3 // indirect
-	inet.af/peercred v0.0.0-20210906144145-0893ea02156a // indirect
 	k8s.io/klog/v2 v2.120.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340 // indirect
 	k8s.io/utils v0.0.0-20240102154912-e7106e64919e // indirect
