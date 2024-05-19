@@ -4,6 +4,7 @@ go 1.22.0
 
 require (
 	github.com/bep/debounce v1.2.1
+	gvisor.dev/gvisor v0.0.0-20240306221502-ee1e1f6070e3
 	inet.af/tcpproxy v0.0.0-20231102063150-2862066fc2a9
 	k8s.io/api v0.29.3
 	k8s.io/apimachinery v0.29.3
@@ -112,8 +113,6 @@ require (
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	// gvisor.dev/gvisor v0.0.0-20240228042926-ccc3c2cbd26d // indirect
-	gvisor.dev/gvisor v0.0.0-20240306221502-ee1e1f6070e3 // indirect
 	inet.af/peercred v0.0.0-20210906144145-0893ea02156a // indirect
 	k8s.io/klog/v2 v2.120.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340 // indirect
