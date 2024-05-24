@@ -9,6 +9,9 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      attestations: write
     steps:
       - uses: docker/setup-qemu-action@v3
 
@@ -24,3 +27,11 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}:stable
+
+      - name: Attest
+        uses: actions/attest-build-provenance@v1
+        id: attest
+        with:
+          subject-name: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
