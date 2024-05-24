@@ -12,6 +12,9 @@ jobs:
     permissions:
       id-token: write
       attestations: write
+    env:
+      REGISTRY: index.docker.io
+      
     steps:
       - uses: docker/setup-qemu-action@v3
 
@@ -32,6 +35,6 @@ jobs:
         uses: actions/attest-build-provenance@v1
         id: attest
         with:
-          subject-name: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}
-          subject-digest: ${{ steps.push.outputs.digest }}
+          subject-name: ${{ env.REGISTRY }}/${{ vars.DOCKERHUB_USERNAME }}/${{ vars.DOCKERHUB_REPO }}
+          subject-path: /bin/tailscale-ingress-controller
           push-to-registry: true
